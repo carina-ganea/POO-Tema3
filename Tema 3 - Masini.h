@@ -34,7 +34,6 @@ public:
     virtual ~Masina()= default;
     Masina& operator= (const Masina&);
     friend istream & operator>> ( istream&, Masina&);
-    ///friend ostream& operator<< ( ostream&, const Masina&);
     virtual void print(ostream&);
     string getBrand() const{
         return brand;
@@ -72,7 +71,6 @@ public:
     ~Coupe() override= default;
     Coupe& operator= (const Coupe&);
     friend istream& operator>> ( istream&, Coupe&);
-    ///friend ostream& operator<< ( ostream&, const Coupe&);
     void print(ostream&) override;
 };
 //////////////////////////////Metode Coupe
@@ -101,7 +99,6 @@ public:
     ~Supersport() override= default;
     Supersport& operator= ( const Supersport&);
     friend istream& operator>> (istream&, Supersport&);
-    //friend ostream& operator<< (ostream&, const Supersport&);
     void print(ostream&) override;
     int getPret(){
         return pret;
@@ -197,7 +194,6 @@ public:
         for( auto m: v)
             colectie.push_back(new T(m));
     }
-    ///Constructor de copiere? Operator de atribuire? Sunt necesare?
     ~Expozitie(){
         for( auto m : colectie)
             delete(m.first);
