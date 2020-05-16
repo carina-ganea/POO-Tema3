@@ -48,7 +48,9 @@ int main() {
         };
         v--;
     }
+    coupe.print(out);
     super.print(out);
+    decap.print(out);
     hothatch.print(out);
     return 0;
 }
